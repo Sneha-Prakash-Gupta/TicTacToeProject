@@ -17,10 +17,13 @@ public class TicTacToe_UC2 {
     }
 
     static void tossAndAssignSymbols() {
-        Random rand = new Random();
+        Random rand = new Random(System.currentTimeMillis());
 
         // Generate 0 or 1
         int toss = rand.nextInt(2);
+
+        // DEBUG: show toss value
+        System.out.println("Toss value: " + toss);
 
         if (toss == 0) {
             // Human starts
